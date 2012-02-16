@@ -27,6 +27,7 @@ namespace MEFdemo1
             InitializeComponent();
             try
             {
+                System.Diagnostics.Debug.WriteLine("BarcodeControl1 loading...");
                 bcr = new BarcodeReader();
                 bcr.BarcodeRead += new BarcodeReadEventHandler(bcr_BarcodeRead);
                 bcr.ThreadedRead(true);
@@ -42,8 +43,12 @@ namespace MEFdemo1
                 sXml += "</Subsystem>";
                 int iSize=sb.Capacity;
                 uErr = ssApi.Set(sXml, sb, ref iSize, 3000);
-                if (uErr == Intermec.DeviceManagement.SmartSystem.ITCSSErrors.E_SS_SUCCESS)
-                    ;
+                if (uErr != Intermec.DeviceManagement.SmartSystem.ITCSSErrors.E_SS_SUCCESS)
+                {
+                    System.Diagnostics.Debug.WriteLine("could not change HardwareTrigger: 0x" + uErr.ToString("X"));
+                    MessageBox.Show("could not change HardwareTrigger");
+                }
+                System.Diagnostics.Debug.WriteLine("...BarcodeControl1 loaded");
             }
             catch (Exception ex)
             {

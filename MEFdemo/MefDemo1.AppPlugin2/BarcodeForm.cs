@@ -39,7 +39,7 @@ namespace AppPlugin2
             }
         }
 
-        //[Import(typeof(IBarcodeScanControl))]
+        //[Import(typeof(IBarcodeScanControl))] //if Import is used here, the catalog is unable to find the control!
         private IBarcodeScanControl conScan;
 
         DirectoryCatalog catalog2;
@@ -56,7 +56,8 @@ namespace AppPlugin2
                 else
                     sPath = "MEFdemo1.HAL.ACME.*Control*.dll";
 
-                //MEFdemo1.HAL.BarcodeControl1.dll                
+                //I was unable to use the different catalog and let it look in a subfolder
+                //so the plugin names are used as a filter
                 catalog2 = new DirectoryCatalog(".", sPath);
 
                 foreach (string s in catalog2.LoadedFiles)
