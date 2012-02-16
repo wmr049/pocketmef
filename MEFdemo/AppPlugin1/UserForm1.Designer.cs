@@ -58,9 +58,11 @@
             this.ClientSize = new System.Drawing.Size(240, 268);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
+            this.KeyPreview = true;
             this.Menu = this.mainMenu1;
             this.MinimizeBox = false;
             this.Name = "UserForm1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UserForm1_KeyDown);
             this.ResumeLayout(false);
 
         }
