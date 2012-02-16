@@ -45,18 +45,10 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.ComponentModel.Composition.Diagnostics, Version=1.0.4424.35972, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\PocketMEF_bin\Microsoft.ComponentModel.Composition.Diagnostics.dll</HintPath>
-    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="Pocket.ComponentModel.Initialization, Version=2009.12.10.0, Culture=neutral, PublicKeyToken=5179643cd5c8740b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\PocketMEF_bin\Pocket.ComponentModel.Initialization.dll</HintPath>
-    </Reference>
-    <Reference Include="Pocket.System.ComponentModel.Composition, Version=2009.12.10.0, Culture=neutral, PublicKeyToken=5179643cd5c8740b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\PocketMEF_bin\Pocket.System.ComponentModel.Composition.dll</HintPath>
+      <HintPath>..\pocketMEF\bin\debug\Pocket.ComponentModel.Initialization.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -85,6 +77,10 @@
     <ProjectReference Include="..\MEFdemo1.AppContracts\MEFdemo1.AppContracts.csproj">
       <Project>{7E3C666A-9023-45C3-AB52-1F7A14AAFCC0}</Project>
       <Name>MEFdemo1.AppContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pocketMEF\PocketComponentModel\Pocket.ComponentModel.csproj">
+      <Project>{0E304D80-FE16-47F0-801F-C32A1A23B6D8}</Project>
+      <Name>Pocket.ComponentModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

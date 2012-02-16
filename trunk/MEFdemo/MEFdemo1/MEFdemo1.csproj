@@ -97,6 +97,14 @@
       <Project>{7E3C666A-9023-45C3-AB52-1F7A14AAFCC0}</Project>
       <Name>MEFdemo1.AppContracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\pocketMEF\Pocket.ComponentModel.Initialization\Pocket.ComponentModel.Initialization.csproj">
+      <Project>{5180B9FE-9011-463A-BE3C-7B842C1349D6}</Project>
+      <Name>Pocket.ComponentModel.Initialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pocketMEF\PocketComponentModel\Pocket.ComponentModel.csproj">
+      <Project>{0E304D80-FE16-47F0-801F-C32A1A23B6D8}</Project>
+      <Name>Pocket.ComponentModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>
